@@ -1,0 +1,37 @@
+{
+  "decks": [
+    {
+     "id": "ihavemyself",
+      "name": "Я у себя есть",
+      "description": "Самопознание и внутренние ресурсы",
+      "emoji": "✨",
+      "isPremium": false,
+      "file": "/decks/ihavemyself.json" 
+    },
+    {
+      "id": "nature",
+      "name": "Природа",
+      "description": "Пейзажи, состояния, ритмы",
+      "emoji": "🌿",
+      "isPremium": false,
+      "file": "/decks/nature.json"
+    },
+    {
+      "id": "relationships",
+      "name": "Отношения",
+      "description": "Про динамику, близость и границы",
+      "emoji": "💞",
+      "isPremium": true,
+      "file": "/decks/relationships.json"
+    },
+    {
+      "id": "universal",
+      "name": "Универсальная",
+      "description": "Для любых вопросов и ситуаций",
+      "emoji": "🎴",
+      "isPremium": false,
+      "file": "/decks/universal.json"
+    }
+  ]
+}
+

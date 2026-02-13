@@ -1,0 +1,354 @@
+/* apps/web/src/app/global.css */
+/* Telegram Mini Apps + Telegram UI friendly globals.
+   Основа: theme params Telegram -> CSS vars --tg-theme-* (через themeParams.bindCssVars). [page:0]
+*/
+
+/* ========== 0) Base reset ========== */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:where(button, input, textarea, select) {
+  font: inherit;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Telegram-style: фон экрана обычно secondary_bg, а "карточки" — section_bg. [page:1] */
+  background: var(--tg-theme-secondary-bg-color, #f4f5f7);
+  color: var(--tg-theme-text-color, #111111);
+}
+
+#root {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Чтобы изображения/длинные строки не ломали layout */
+#root * {
+  max-width: 100%;
+}
+
+/* ========== 1) App semantic vars ========== */
+/* Telegram theme params (bg/secondary/section/text/hint/link/button/...) приходят от Telegram и их надо использовать. [page:1] */
+:root {
+  /* Primary palette */
+  --app-bg: var(--tg-theme-bg-color, #ffffff);
+  --app-secondary-bg: var(--tg-theme-secondary-bg-color, #f4f5f7); /* алиас под текущий код страниц */
+  --app-section-bg: var(--tg-theme-section-bg-color, var(--app-bg));
+  --app-text: var(--tg-theme-text-color, #111111);
+  --app-subtitle: var(--tg-theme-subtitle-text-color, rgba(0, 0, 0, 0.6));
+  --app-hint: var(--tg-theme-hint-color, rgba(127, 127, 127, 0.8));
+  --app-link: var(--tg-theme-link-color, #0088cc);
+
+  /* Controls */
+  --app-button-bg: var(--tg-theme-button-color, #0088cc);
+  --app-button-text: var(--tg-theme-button-text-color, #ffffff);
+  --app-destructive: var(--tg-theme-destructive-text-color, #ec3942);
+
+  /* Separators */
+  --app-separator: var(--tg-theme-section-separator-color, rgba(127, 127, 127, 0.25));
+  --app-section-header-text: var(--tg-theme-section-header-text-color, var(--app-link));
+
+  /* Radii & shadows (спокойнее, как в Telegram) */
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 10px;
+
+  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.06);
+
+  /* Derived surfaces */
+  --surface: var(--app-section-bg);                 /* карточка */
+  --surface-2: color-mix(in srgb, var(--app-secondary-bg) 80%, var(--app-bg));
+  --border: color-mix(in srgb, var(--app-separator) 70%, transparent);
+  --border-strong: color-mix(in srgb, var(--app-separator) 100%, transparent);
+}
+
+/* ========== 2) Telegram UI (TGUI) token overrides ========== */
+/* TelegramUI компоненты (например Section) используют --tgui--* токены.
+   Мы мапим их на tg-theme-* чтобы не было "тёмно-серых секций" и чтобы тема работала единообразно. [page:1][page:0]
+*/
+:root {
+  --tgui--bg_color: var(--app-bg);
+  --tgui--secondary_bg_color: var(--app-secondary-bg);
+  --tgui--section_bg_color: var(--app-section-bg);
+
+  --tgui--text_color: var(--app-text);
+  --tgui--subtitle_text_color: var(--app-subtitle);
+  --tgui--hint_color: var(--app-hint);
+  --tgui--link_color: var(--app-link);
+
+  --tgui--button_color: var(--app-button-bg);
+  --tgui--button_text_color: var(--app-button-text);
+
+  --tgui--destructive_text_color: var(--app-destructive);
+
+  --tgui--section_separator_color: var(--app-separator);
+  --tgui--section_header_text_color: var(--app-section-header-text);
+}
+
+/* ========== 3) Common layout helpers ========== */
+.pageContent {
+  padding: 0 0 20px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.rowWrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+  padding: 18px;
+  color: var(--app-hint);
+}
+
+.muted {
+  opacity: 0.65;
+}
+
+.smallText {
+  font-size: 13px;
+  color: var(--app-hint);
+}
+
+/* ========== 4) Inputs ========== */
+.textarea {
+  width: 100%;
+  min-height: 104px;
+  padding: 12px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--app-text);
+
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: color-mix(in srgb, var(--app-button-bg) 45%, var(--border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--app-button-bg) 18%, transparent);
+}
+
+/* История/экспорт JSON */
+.textareaMono {
+  min-height: 200px;
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ========== 5) Card-like buttons (единый стиль) ========== */
+.cardButton {
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--app-text);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.cardButton:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--app-button-bg) 32%, var(--border));
+  box-shadow: var(--shadow-sm);
+}
+
+.cardButton:active {
+  transform: translateY(0);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+
+  background: color-mix(in srgb, var(--app-button-bg) 12%, var(--surface));
+  color: var(--app-text);
+  border: 1px solid color-mix(in srgb, var(--app-button-bg) 20%, var(--border));
+}
+
+/* ========== 6) Segmented tabs (для JournalPage) ========== */
+.segmented {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.segmentedBtn {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--app-text);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.segmentedBtnActive {
+  border-color: color-mix(in srgb, var(--app-button-bg) 45%, var(--border));
+  background: color-mix(in srgb, var(--app-button-bg) 12%, transparent);
+  font-weight: 800;
+}
+
+/* ========== 7) Free cards grid (JournalPage) ========== */
+.freeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.freeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 12px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.freeKeyword {
+  font-size: 11px;
+  background: color-mix(in srgb, var(--app-secondary-bg) 70%, var(--surface));
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* ========== 8) Modal (пока самописная, но в стиле темы) ========== */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  z-index: 999;
+}
+
+.modalSheet {
+  width: 100%;
+  max-width: 560px;
+  max-height: 86vh;
+  overflow: auto;
+
+  border-radius: 18px;
+  background: var(--app-bg);
+  border: 1px solid var(--border-strong);
+  padding: 14px;
+}
+
+/* ========== 9) Card flip visuals (твои, но под тему) ========== */
+.cardBack {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  display: grid;
+  place-items: center;
+  font-size: 64px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(102, 126, 234, 0.28);
+}
+
+.flip {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.front {
+  display: grid;
+  place-items: center;
+  font-size: 56px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: var(--surface);
+  color: var(--app-text);
+}
+
+.flip.flipped .front {
+  transform: rotateY(180deg);
+}
+.flip.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .flip .front,
+  .flip .back {
+    transition: none;
+  }
+}

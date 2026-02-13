@@ -1,0 +1,118 @@
+{
+  "id": "ihavemyself",
+  "name": "Я у себя есть",
+  "emoji": "✨",
+  "cardCount": 22,
+  "cards": [
+    {
+      "id": "ihm01",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm1.jpeg",
+      "keywords": ["начало", "источник"]
+    },
+    {
+      "id": "ihm02",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm2.jpeg",
+      "keywords": ["выбор", "путь"]
+    },
+    {
+      "id": "ihm03",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm3.jpeg",
+      "keywords": ["творчество", "выражение"]
+    },
+    {
+      "id": "ihm04",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm4.jpeg",
+      "keywords": ["основа", "стабильность"]
+    },
+    {
+      "id": "ihm05",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm5.jpeg",
+      "keywords": ["свобода", "движение"]
+    },
+    {
+      "id": "ihm06",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm6.jpeg",
+      "keywords": ["гармония", "баланс"]
+    },
+    {
+      "id": "ihm07",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm7.jpeg",
+      "keywords": ["внутренняя сила", "магия"]
+    },
+    {
+      "id": "ihm08",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm8.jpeg",
+      "keywords": ["справедливость", "ясность"]
+    },
+    {
+      "id": "ihm09",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm9.jpeg",
+      "keywords": ["мудрость", "одиночество"]
+    },
+    {
+      "id": "ihm10",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm10.jpeg",
+      "keywords": ["судьба", "поворот"]
+    },
+    {
+      "id": "ihm11",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm11.jpeg",
+      "keywords": ["сила", "смелость"]
+    },
+    {
+      "id": "ihm12",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm12.jpeg",
+      "keywords": ["отпускание", "жертва"]
+    },
+    {
+      "id": "ihm13",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm13.jpeg",
+      "keywords": ["трансформация", "завершение"]
+    },
+    {
+      "id": "ihm14",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm14.jpeg",
+      "keywords": ["умеренность", "синтез"]
+    },
+    {
+      "id": "ihm15",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm15.jpeg",
+      "keywords": ["тень", "искушение"]
+    },
+    {
+      "id": "ihm16",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm16.jpeg",
+      "keywords": ["разрушение", "освобождение"]
+    },
+    {
+      "id": "ihm17",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm17.jpeg",
+      "keywords": ["надежда", "звезда"]
+    },
+    {
+      "id": "ihm18",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm18.jpeg",
+      "keywords": ["интуиция", "тайна"]
+    },
+    {
+      "id": "ihm19",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm19.jpeg",
+      "keywords": ["свет", "радость"]
+    },
+    {
+      "id": "ihm20",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm20.jpeg",
+      "keywords": ["пробуждение", "суд"]
+    },
+    {
+      "id": "ihm21",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm21.jpeg",
+      "keywords": ["целостность", "мир"]
+    },
+    {
+      "id": "ihm22",
+      "imageUrl": "https://ik.imagekit.io/alfamayak/cards/ihm22.jpeg",
+      "keywords": ["новое начало", "безумие"]
+    }
+  ]
+}

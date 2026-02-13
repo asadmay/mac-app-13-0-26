@@ -1,0 +1,18 @@
+{
+  "id": "nature",
+  "name": "Природа",
+  "emoji": "🌿",
+  "cardCount": 10,
+  "cards": [
+    { "id": "n01", "imageUrl": "https://via.placeholder.com/600x800/2a9d8f/ffffff?text=Nature+01", "keywords": ["поток", "движение"] },
+    { "id": "n02", "imageUrl": "https://via.placeholder.com/600x800/264653/ffffff?text=Nature+02", "keywords": ["глубина", "тишина"] },
+    { "id": "n03", "imageUrl": "https://via.placeholder.com/600x800/e9c46a/000000?text=Nature+03", "keywords": ["тепло", "поддержка"] },
+    { "id": "n04", "imageUrl": "https://via.placeholder.com/600x800/f4a261/000000?text=Nature+04", "keywords": ["зрелость", "время"] },
+    { "id": "n05", "imageUrl": "https://via.placeholder.com/600x800/e76f51/ffffff?text=Nature+05", "keywords": ["импульс", "порыв"] },
+    { "id": "n06", "imageUrl": "https://via.placeholder.com/600x800/6d6875/ffffff?text=Nature+06", "keywords": ["туман", "неясность"] },
+    { "id": "n07", "imageUrl": "https://via.placeholder.com/600x800/b5838d/ffffff?text=Nature+07", "keywords": ["мягкость", "принятие"] },
+    { "id": "n08", "imageUrl": "https://via.placeholder.com/600x800/ffb4a2/000000?text=Nature+08", "keywords": ["отпускание", "легкость"] },
+    { "id": "n09", "imageUrl": "https://via.placeholder.com/600x800/00b4d8/000000?text=Nature+09", "keywords": ["свежесть", "вдох"] },
+    { "id": "n10", "imageUrl": "https://via.placeholder.com/600x800/0077b6/ffffff?text=Nature+10", "keywords": ["курс", "направление"] }
+  ]
+}

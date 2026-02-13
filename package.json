@@ -1,0 +1,17 @@
+{
+  "name": "mak-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:bot": "cd apps/bot && npm run dev",
+    "dev:web": "cd apps/web && npm run dev",
+    "build:bot": "cd apps/bot && npm run build",
+    "build:web": "cd apps/web && npm run build",
+    "deploy:bot": "cd apps/bot && vercel --prod",
+    "deploy:web": "cd apps/web && vercel --prod"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

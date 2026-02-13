@@ -1,0 +1,16 @@
+{
+  "id": "relationships",
+  "name": "Отношения",
+  "emoji": "💞",
+  "cardCount": 8,
+  "cards": [
+    { "id": "r01", "imageUrl": "https://via.placeholder.com/600x800/ff8fab/000000?text=Rel+01", "keywords": ["близость", "тепло"] },
+    { "id": "r02", "imageUrl": "https://via.placeholder.com/600x800/fec5bb/000000?text=Rel+02", "keywords": ["границы", "уважение"] },
+    { "id": "r03", "imageUrl": "https://via.placeholder.com/600x800/fcd5ce/000000?text=Rel+03", "keywords": ["уязвимость", "честность"] },
+    { "id": "r04", "imageUrl": "https://via.placeholder.com/600x800/fae1dd/000000?text=Rel+04", "keywords": ["поддержка", "союз"] },
+    { "id": "r05", "imageUrl": "https://via.placeholder.com/600x800/8ecae6/000000?text=Rel+05", "keywords": ["диалог", "слышать"] },
+    { "id": "r06", "imageUrl": "https://via.placeholder.com/600x800/219ebc/ffffff?text=Rel+06", "keywords": ["напряжение", "прояснение"] },
+    { "id": "r07", "imageUrl": "https://via.placeholder.com/600x800/023047/ffffff?text=Rel+07", "keywords": ["верность", "опора"] },
+    { "id": "r08", "imageUrl": "https://via.placeholder.com/600x800/ffb703/000000?text=Rel+08", "keywords": ["радость", "игра"] }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "universal",
+  "name": "Универсальная",
+  "emoji": "🎴",
+  "cardCount": 12,
+  "cards": [
+    { "id": "u01", "imageUrl": "https://via.placeholder.com/600x800/667eea/ffffff?text=Universal+01", "keywords": ["движение", "импульс"] },
+    { "id": "u02", "imageUrl": "https://via.placeholder.com/600x800/764ba2/ffffff?text=Universal+02", "keywords": ["выбор", "развилка"] },
+    { "id": "u03", "imageUrl": "https://via.placeholder.com/600x800/ff6b6b/ffffff?text=Universal+03", "keywords": ["напряжение", "смелость"] },
+    { "id": "u04", "imageUrl": "https://via.placeholder.com/600x800/4ecdc4/ffffff?text=Universal+04", "keywords": ["баланс", "покой"] },
+    { "id": "u05", "imageUrl": "https://via.placeholder.com/600x800/ffe66d/000000?text=Universal+05", "keywords": ["радость", "простота"] },
+    { "id": "u06", "imageUrl": "https://via.placeholder.com/600x800/1a936f/ffffff?text=Universal+06", "keywords": ["рост", "ресурс"] },
+    { "id": "u07", "imageUrl": "https://via.placeholder.com/600x800/114b5f/ffffff?text=Universal+07", "keywords": ["границы", "защита"] },
+    { "id": "u08", "imageUrl": "https://via.placeholder.com/600x800/3d5a80/ffffff?text=Universal+08", "keywords": ["ясность", "фокус"] },
+    { "id": "u09", "imageUrl": "https://via.placeholder.com/600x800/98c1d9/000000?text=Universal+09", "keywords": ["открытость", "контакт"] },
+    { "id": "u10", "imageUrl": "https://via.placeholder.com/600x800/e0fbfc/000000?text=Universal+10", "keywords": ["новое", "интерес"] },
+    { "id": "u11", "imageUrl": "https://via.placeholder.com/600x800/ee6c4d/ffffff?text=Universal+11", "keywords": ["решительность", "действие"] },
+    { "id": "u12", "imageUrl": "https://via.placeholder.com/600x800/293241/ffffff?text=Universal+12", "keywords": ["пауза", "размышление"] }
+  ]
+}
